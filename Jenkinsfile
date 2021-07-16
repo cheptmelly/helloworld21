@@ -3,7 +3,7 @@ pipeline {
   tools {
     maven 'M2_HOME'
   }
-  enviroment {
+  environment {
     registry = "cheptmelly/devops-pipeline"
     registryCredential = 'd47bc4a0-933e-4d08-afe0-1bb967428259'
   }
