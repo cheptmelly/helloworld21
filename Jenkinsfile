@@ -5,7 +5,7 @@ pipeline {
   }
   environment {
     registry = "cheptmelly/devops-pipeline"
-    registryCredential = 'e2efe7ac-4add-431b-a3dc-fc6b563773e4'
+    registryCredential = 'd47bc4a0-933e-4d08-afe0-1bb967428259'
   }
   stages {
     stage ('Build'){
