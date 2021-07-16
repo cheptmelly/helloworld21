@@ -3,6 +3,10 @@ pipeline {
   tools {
     maven 'M2_HOME'
   }
+  enviroment {
+    registry = "cheptmelly/devops-pipeline"
+    registryCredential = 'd47bc4a0-933e-4d08-afe0-1bb967428259'
+  }
   stages {
     stage ('Build'){
       steps {
@@ -19,14 +23,9 @@ pipeline {
     }
   stage ('deploy'){
       steps {
-      echo "deploy step"
-       sleep 10
-      }
-    }
- stage ('docker'){
-      steps {
-      echo "image step"
-       sleep 10
+        script {
+          docker.build registry + ":$BUILD_NUMBER"
+        }
       }
     } 
   }
