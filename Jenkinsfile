@@ -1,5 +1,8 @@
 pipeline {
   agent any
+  trigggers {
+    pollSCM '* * * * *'
+  }
   tools {
     maven 'M2_HOME'
   }
