@@ -5,6 +5,21 @@ pipeline {
             steps{
                 echo "Hello world"
             }
+        } 
+        stage ('test'){
+            steps{
+                echo "test"
+            }
+        }
+        stage ('deploy'){
+            steps{
+                echo "deploy stage"
+            }
+        }
+        stage ('docker'){
+            steps{
+                echo "image step"
+            }
         }
     }
 }
